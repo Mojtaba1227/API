@@ -8,8 +8,7 @@ const app = express();
 import swaggerJsDoc from "swagger-jsdoc";
 import swaggerUi from 'swagger-ui-express';
 const port = 3000; 
-const USERNAME = 'mojtaba';
-const PASSWORD = "kim";
+
 
 
 
@@ -27,7 +26,7 @@ const swaggerOptions = {
     },
     servers: [
       {
-        url: "http://localhost:3000", // Adjust if necessary
+        url: "http://localhost:3000", 
       },
     ],
     components: {
@@ -68,7 +67,7 @@ const swaggerOptions = {
       },
     },
   },
-  apis: ["./api.js"], // Path to your Express routes file
+  apis: ["./api.js"], 
 };
 
 
@@ -174,7 +173,7 @@ app.post('/product', (req, res) => {
   });
 });
 
-// PUT (update) an existing product
+// PUT update an existing product
 /**
  * @swagger
  * /product/{id}:
@@ -204,7 +203,7 @@ app.post('/product', (req, res) => {
  *         description: Product not found
  */
 
-// PUT (update) an existing product
+// PUT update an existing product
 app.put('/product/:id', (req, res) => {
 
   const productId = req.params.id;
@@ -221,7 +220,7 @@ app.put('/product/:id', (req, res) => {
   });
 });
 
-// PATCH (partially update) an existing product
+// PATCH partially update an existing product
 /**
  * @swagger
  * /product/{id}:
@@ -263,7 +262,7 @@ app.put('/product/:id', (req, res) => {
  */
 
 
-// PATCH (partially update) an existing product
+// PATCH partially updatean existing product
 app.patch('/product/:id', (req, res) => {
 
   const productId = req.params.id;
